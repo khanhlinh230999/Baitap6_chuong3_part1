@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Baitap6_chuong3_part1
 {
@@ -6,7 +6,11 @@ namespace Baitap6_chuong3_part1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SinhVien sv = new SinhVien();
+            sv.Nhap();
+            sv.TinhDiemTB();
+            sv.InThongTinSV();
+            Console.ReadLine();
         }
     }
 }
