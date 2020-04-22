@@ -1,8 +1,50 @@
-<Project Sdk="Microsoft.NET.Sdk">
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-  </PropertyGroup>
+namespace Baitap6_chuong3_part1
+{
+    class SinhVien
+    {
+        private string MaSV;
+        private string HoTen;
+        private int NamSinh;
+        private double DiemLapTrinh;
+        private double DiemCSDL;
+        private double DiemTrungBinh;
 
-</Project>
+
+        public SinhVien()
+        {
+            MaSV = "";
+            HoTen = "";
+            NamSinh = 1999;
+            DiemTrungBinh = DiemLapTrinh = DiemCSDL = 0;
+        }
+        public void Nhap()
+        {
+            Console.WriteLine("Hay nhap ma sinh vien:");
+            MaSV = Console.ReadLine();
+            Console.WriteLine("Hay nhap ho va ten:");
+            HoTen = Console.ReadLine();
+            Console.WriteLine("Hay nhap nam sinh:");
+            NamSinh = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Hay nhap diem lap trinh:");
+            DiemLapTrinh = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Hay nhap diem CSDL:");
+            DiemCSDL = Convert.ToInt32(Console.ReadLine());
+        }
+        public void TinhDiemTB()
+        {
+            DiemTrungBinh = (DiemCSDL + DiemLapTrinh) / 2;
+        }
+        public void InThongTinSV()
+        {
+            Console.WriteLine("Thong tin cua sinh vien:\n Ma sinh vien:{0}\n Ho va ten:{1}\n" +
+                "Nam sinh:{2}\n Diem lap trinh:{3}\n Diem CSDL:{4}\n Diem trung binh:{5}", MaSV, HoTen, NamSinh, DiemLapTrinh, DiemCSDL, DiemTrungBinh);
+
+        }
+    }
+}
+
+
